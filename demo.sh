@@ -1,5 +1,5 @@
 if [ -d $1 ]; then
-  exit
+  exit 1
 else
   mkdir $1
   cd $1
@@ -10,5 +10,5 @@ else
   echo 'h1{color: red;}' > css/style.css
   echo 'var string = "Hello World"' > js/main.js
   echo 'alert(string)' >> js/main.js
-  exit
+  exit 0
 fi
